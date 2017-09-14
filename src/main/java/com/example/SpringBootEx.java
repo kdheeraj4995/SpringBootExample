@@ -1,9 +1,9 @@
-package com.example.main;
+package com.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages="com.example")
+@SpringBootApplication
 public class SpringBootEx {
 	
 	public static void main(String[] args) throws Exception {
