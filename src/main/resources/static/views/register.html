@@ -1,24 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Register</title>
-</head>
-<body>
-<form>
+<div data-ng-controller="userCtrl" >
+<form >
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4" class="col-form-label">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      <label for="inputUsername4" class="col-form-label">Email</label>
+      <input data-ng-model="username" type="email" class="form-control" id="inputUsername4" placeholder="username">
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4" class="col-form-label">Password</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+      <input data-ng-model="password" type="password" class="form-control" id="inputPassword4" placeholder="Password">
     </div>
   </div>
   <div class="form-group">
     <label for="inputAddress" class="col-form-label">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+    <input data-ng-model="address.street" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
   </div>
   <div class="form-group">
     <label for="inputAddress2" class="col-form-label">Address 2</label>
@@ -27,15 +21,15 @@
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputCity" class="col-form-label">City</label>
-      <input type="text" class="form-control" id="inputCity">
+      <input data-ng-model="address.city" type="text" class="form-control" id="inputCity">
     </div>
     <div class="form-group col-md-4">
       <label for="inputState" class="col-form-label">State</label>
-      <select id="inputState" class="form-control">Select</select>
+      <input data-ng-model="address.state" type="text" class="form-control" id="inputState">
     </div>
     <div class="form-group col-md-2">
       <label for="inputZip" class="col-form-label">Pin Code</label>
-      <input type="text" class="form-control" id="inputZip">
+      <input data-ng-model="address.pin" type="text" class="form-control" id="inputZip">
     </div>
   </div>
   <div class="form-group">
@@ -45,7 +39,6 @@
       </label>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Register</button>
+  <input  type="button" data-ng-click=register() class="btn btn-primary" value="Register">
 </form>
-</body>
-</html>
+</div>

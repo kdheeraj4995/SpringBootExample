@@ -1,8 +1,10 @@
 package com.config.models;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -10,15 +12,20 @@ import javax.persistence.Table;
 public class UserData {
 	@Id
 	@GeneratedValue
-	private int userid;
+	private int userId;
+	
+	
 	private String username;
 	private String password;
 	
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Address address;
+	
 	public int getUserid() {
-		return userid;
+		return userId;
 	}
-	public void setUserid(int userid) {
-		this.userid = userid;
+	public void setUserid(int userId) {
+		this.userId = userId;
 	}
 	public String getUsername() {
 		return username;
@@ -31,5 +38,11 @@ public class UserData {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 }
